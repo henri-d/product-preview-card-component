@@ -157,7 +157,8 @@ body {
 }
 
 /* Fallback for older browsers that don't support :focus-visible */
-.btn-add:focus:not(:focus-visible) {
+.btn-add:focus:not(:focus-visible),
+.attribution a:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -178,11 +179,19 @@ body {
   text-decoration: none;
   font-weight: 700;
   transition: color 0.3s ease;
+  border-radius: 2px;
+  padding: 0 1px;
 }
 
 .attribution a:hover {
   color: #308168;
   text-decoration: underline;
+}
+
+.attribution a:focus-visible {
+  outline: 2px solid transparent;
+  /* Using Green 700 at 60% opacity for better contrast on white */
+  box-shadow: 0 0 0 2px rgba(20, 64, 50, 0.6);
 }
 
 .attribution .heart {
